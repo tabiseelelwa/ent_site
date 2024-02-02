@@ -1,0 +1,166 @@
+:root {
+  --maincolor: #050567;
+  --secondColor: #4d52d7;
+  --transition: all 0.3s;
+  --mainPadding: 0.5rem 3.5rem;
+  --secondPadding: 0 3.5rem;
+}
+
+.dash {
+  display: flex;
+
+  .nav {
+    background-color: #fff;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    padding: 1.2rem;
+    position: fixed;
+    width: 100%;
+  }
+
+  .main {
+    padding: 5.5rem 2rem;
+  }
+  .outlet_container {
+    display: flex;
+    margin-left: 301px;
+    flex-direction: column;
+    width: 100%;
+
+    .outlet {
+      padding: 1.2rem;
+    }
+  }
+
+  .article-admin-container {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    gap: 2rem;
+
+    .articles-admin {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      article {
+        display: flex;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+          rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+        img {
+          width: 300px;
+          height: 300px;
+          border-right: #cccccc 1px solid;
+        }
+
+        .texte {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          margin: 0 2rem 0.5rem 2rem;
+
+          .btns {
+            display: flex;
+            gap: 1rem;
+            margin-top: 3rem;
+            justify-content: flex-end;
+            button {
+              padding: 0.5rem 1rem;
+              border: 2px #050567 solid;
+              background-color: #050567;
+              color: #fff;
+              transition: var(--transition);
+              border-radius: 5px;
+            }
+
+            button:hover {
+              background-color: transparent;
+              color: #050567;
+            }
+          }
+        }
+      }
+      .article-admin-texte {
+        text-align: justify;
+        padding: 1rem 0 1.5rem;
+      }
+    }
+
+    .control-articles-admin {
+      position: fixed;
+      right: 3rem;
+      top: 6rem;
+
+      a {
+        text-decoration: none;
+        background-color: #050567;
+        color: #fff;
+        padding: 0.6rem;
+        border-radius: 0.7rem;
+        border: #050567 2px solid;
+      }
+
+      a:hover {
+        background-color: transparent;
+        border: #050567 2px solid;
+        color: #050567;
+        transition: var(--transition);
+      }
+    }
+  }
+}
+
+// PROFIL D'UTILISATEUR
+
+.profil {
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .profil_photo {
+    display: flex;
+    align-items: flex-end;
+    img {
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+      border: 2px #050567 solid;
+    }
+
+    button {
+      border: none;
+      background-color: #050567;
+      margin-left: -2.5rem;
+      margin-bottom: 1rem;
+      color: #fff;
+      font-size: 18px;
+      border-radius: 50%;
+      padding: 0.15rem 0.4rem;
+    }
+  }
+
+  .donnee_agent {
+    width: 500px;
+    label {
+      margin-top: 1rem;
+      display: block;
+    }
+
+    input {
+      width: 100%;
+      border: 1px solid #050567;
+      padding: 0.3rem;
+      outline: none;
+    }
+
+    button {
+      margin-top: 1rem;
+      background-color: #050567;
+      color: #fff;
+      padding: 0.5rem;
+      border: #050567 solid 1px;
+      border-radius: 3px;
+    }
+  }
+}

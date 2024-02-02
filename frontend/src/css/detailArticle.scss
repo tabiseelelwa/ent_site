@@ -1,0 +1,131 @@
+.detail-article {
+  padding: 7rem;
+}
+
+.Actualite {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3rem 20rem 1rem 20rem;
+
+  .contenuActualite {
+    article {
+      .image img {
+        width: 100%;
+        height: 400px;
+        background-color: #070a68;
+        margin: 1rem 0;
+      }
+
+      .contenu {
+        text-align: justify;
+      }
+    }
+  }
+
+  .memeCateg {
+    h3 {
+      margin: 0 20rem 2rem;
+    }
+
+    .article {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+
+      article {
+        border: 1px #1219d7 solid;
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 2rem;
+
+        .texte {
+          background-color: rgba(8, 155, 247, 0.224);
+          border-top: var(--maincolor) 1px solid;
+          padding: 1rem;
+          height: 100%;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: var(--maincolor);
+      }
+
+      article:hover {
+        color: #070a68;
+        font-weight: 600;
+        transition: var(--transition);
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+      }
+
+      img {
+        width: 100%;
+        height: 250px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Actualite {
+    padding: 0.3rem;
+    margin: 0.5rem;
+
+    .memeCateg {
+      h3 {
+        margin: 0;
+        padding: 0 0 1rem 0;
+      }
+      .article {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+
+        article {
+          flex-direction: row;
+          border: none;
+          .texte {
+            border-top: none;
+          }
+        }
+
+        img {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 678px) {
+  .Actualite {
+    .memeCateg {
+      h3 {
+        margin: 0;
+        padding: 0 0 1rem 0;
+      }
+      .article {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+
+        article {
+          flex-direction: row;
+          border: none;
+          .texte {
+            border-top: none;
+          }
+        }
+
+        img {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
